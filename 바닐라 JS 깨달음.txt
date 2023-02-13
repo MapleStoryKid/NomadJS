@@ -1,0 +1,21 @@
+***아래 function onLoginSubmit(tomato)안의 tomato가 방금 일어난 @이벤트@에 대한 (object)정보를 전달한다.
+function onLoginSubmit(tomato) {
+  tomato.preventDefault();
+  console.log(tomato);}
+
+loginForm.addEventListener("submit", onLoginSubmit);
+//
+
+
+***아래 코드처럼 id를 찾아서 안에 무언가를 추가할 수 있다.
+document.getElementById("todo-form").appendChild(bgImage);
+
+
+***JSON.parse는 단순한 string을 살아있는 array로 변환한다.
+	JSON.parse("[1,2,3,4]");
+		
+	출력: [1,2,3,4]
+
+
+
+filter는 기존 array를 변경시키지 않는다.
