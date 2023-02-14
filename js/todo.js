@@ -18,15 +18,16 @@ function deleteToDo(event) {
   const li = event.target.parentElement;
   li.remove();
   toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
+  saveToDos();
 }
 
 
 //새로운 element를 생성하는 코드
-function paintToDo(newTodo) {
+function paintToDo(a) {
   const li = document.createElement("li");
-  li.id - newTodo.id;
+  li.id - a.id;
   const span = document.createElement("span");
-  span.innerText = newTodo.text;
+  span.innerText = a.text;
   const button = document.createElement("button");
   button.innerText = "❌";
   button.addEventListener("click", deleteToDo);
@@ -56,7 +57,7 @@ if (savedToDos !== null) {
   const parsedToDos = JSON.parse(savedToDos);
   //localStorage 안에 데이터(즉 saveToDos)가 위에 빈 array(즉 toDos에 입력)
   toDos = parsedToDos;
-  parsedToDos.forEach((item) => console.log("this is the turn of ", item));
+  parsedToDos.forEach(paintToDo);
 }
 
 //삭제 플로우: 전체 삭제 후 새로운 배열 생성.
