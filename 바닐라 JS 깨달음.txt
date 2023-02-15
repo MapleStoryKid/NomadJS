@@ -19,3 +19,6 @@ document.getElementById("todo-form").appendChild(bgImage);
 
 
 filter는 기존 array를 변경시키지 않는다.
+
+
+Navigator는 브라우저 정보를 불러온다.(예시: language, geolocation, appName)

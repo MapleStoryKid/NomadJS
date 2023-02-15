@@ -25,7 +25,7 @@ function deleteToDo(event) {
 //새로운 element를 생성하는 코드
 function paintToDo(a) {
   const li = document.createElement("li");
-  li.id - a.id;
+  li.id = a.id;
   const span = document.createElement("span");
   span.innerText = a.text;
   const button = document.createElement("button");
